@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(26, 26, 26);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#reset {
+    width: 3em;
+    height: 30px;
+    border: 1px solid rgb(155, 119, 62);
+    /* text-align: center;
+    font-size: large; */
+    background-color: rgb(175, 111, 111);
+    cursor: pointer;
+    margin-right: 10px;
+}
+.box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    width: 260px;
+    border-color: rgb(28, 31, 32);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow: rgb(155, 119, 62) -1px 1px;
+}
+.box-hover:hover {
+    background-color: rgb(36, 35, 35);
+    cursor: pointer;
+}
+.cardName {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.box-selected {
+    background-color: rgb(51, 126, 74);
+}
+
+
+#toast {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #toast.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
