@@ -11,6 +11,20 @@ body {
     flex-direction: column;
     align-items: end;
 }
+.actions {
+    display:flex;
+    margin-right: 8px;
+}
+#add-card {
+    width: 3em;
+    height: 30px;
+    border: 1px solid rgb(155, 119, 62);
+    /* text-align: center;
+    font-size: large; */
+    background-color: rgb(20, 114, 59);
+    cursor: pointer;
+    margin-right: 10px;
+}
 #reset {
     width: 3em;
     height: 30px;
@@ -25,9 +39,9 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     border: 1px solid white;
-    width: 260px;
-    border-color: rgb(28, 31, 32);
-    height: 300px;
+    width: 190px;
+    border-color: rgb(121, 135, 140);
+    height: 260px;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -36,14 +50,25 @@ body {
 .box-hover:hover {
     background-color: rgb(36, 35, 35);
     cursor: pointer;
+    opacity: .5;
 }
 .cardName {
     color: white;
     font-weight: bold;
-    font-size: large;
+    font-size: small;
+    text-align: center;
 }
 .box-selected {
-    background-color: rgb(51, 126, 74);
+    background-color: rgb(145, 142, 10);
+    box-shadow: 0px 0px 7px 5px rgb(51, 126, 74);
+}
+
+.not-selected-cards {
+  opacity: .1;
+}
+
+.highlight-card {
+  box-shadow: 0px 0px 7px 5px rgb(160, 147, 255);
 }
 
 
