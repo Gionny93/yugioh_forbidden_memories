@@ -134,11 +134,10 @@ function addCardAndCheckIfFound(box, cardName, event) {
 
 async function loadCardAndLogic() {
     const deck = await fetch('deck.csv').then(response => response.text())
-    // console.log(deck)
     const fusions = await fetch('fusions.csv').then(response => response.text())
 
 
-    Array.from(new Set(deck.split(','))).sort().forEach(cardName => {
+    Array.from(new Set(deck.split('\n'))).sort().forEach(cardName => {
         const cardContainer = document.createElement("div")
         cardContainer.appendChild(createCard(cardName.trim()))
         cardContainer.appendChild(createCardName(cardName.trim()))

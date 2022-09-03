@@ -17,3 +17,10 @@ done
 RES=$(echo "${card1:+$card1,}${card2:+$card2,}${card3:+$card3,}${card4:+$card4,}${card5:+$card5,}=$fusion" | sed -e 's/,=/=/g')
 echo $RES >> fusions.csv
 echo "FUSION ADDEDD SUCCESSFULLY"
+
+echo ${RES} | cut -d= -f 1 | tr , "\n" >> deck.csv
+# bo non funziona diretto
+sort -u deck.csv > deck2.csv
+cat deck2.csv > deck.csv
+rm -rf deck2.csv
+echo "CARDS ADDEDD SUCCESSFULLY TO DECK"
